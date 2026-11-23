@@ -1,0 +1,19 @@
+# Large data files (see data/README.md)
+data/model_input_data.csv
+data/ASML_minute_data.csv
+data/nasdaq100_daily/
+
+# Secrets
+.env
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

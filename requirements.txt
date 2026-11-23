@@ -1,0 +1,22 @@
+# Core data handling and plotting
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+
+# Statistics and forecasting
+statsmodels>=0.14
+pmdarima>=2.0
+
+# Machine learning
+scikit-learn>=1.3
+xgboost>=1.7
+tensorflow>=2.12,<2.16   # models were saved as .h5 with Keras 2
+
+# Data access
+yfinance>=0.2
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+
+# Jupyter
+jupyter
