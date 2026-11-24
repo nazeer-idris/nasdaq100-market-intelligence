@@ -1,4 +1,4 @@
-# 📈 Uncovering Market Intelligence: A NASDAQ-100 Data Challenge
+# Uncovering Market Intelligence: A NASDAQ-100 Data Challenge
 
 Time series analysis, forecasting and machine learning on NASDAQ-100 stock data, built for a (fictional) fintech client as part of the **Applied Data Science & AI** programme at Breda University of Applied Sciences (Year 1, Block D, 2024-25).
 
@@ -16,7 +16,7 @@ Time series analysis, forecasting and machine learning on NASDAQ-100 stock data,
 
 ---
 
-## 📌 Overview
+## Overview
 
 **Move Tickers** is a SaaS company that delivers real-time market updates and data visualisation tools, and it is moving into wealth management. The company asked us, as data scientists, to find patterns in the stock market that could support trading strategies, alerts and dashboards on its platform.
 
@@ -29,19 +29,19 @@ In this project I:
 - **Built**, with my team, a minute-level prediction pipeline for Apple, Amazon and Alphabet.
 - **Assessed** the proposed AI system against the **EU AI Act** and **GDPR**.
 
-## 👥 Team & My Role
+## Team & My Role
 
 This was a team project (Group 11, four ADS&AI students) with individual and group parts. **My main role in the group was data engineering**: cleaning, transforming and preparing the data that the models were trained on.
 
 | Part | Type | What it covers |
 |------|------|----------------|
-| [Time Series Analysis notebook](notebooks/01_time_series_analysis.ipynb) | 🧑 Individual | Time series handling, visualisation, ARIMA, regression, classification, clustering, anomaly detection, MLP and LSTM |
-| [SQL queries](sql/) | 🧑 Individual | Filtering, aggregation, joins, `CASE`, window functions on the financial data warehouse |
-| [Project proposal](reports/project_proposal.pdf) | 🧑 Individual | AI Project Canvas for an "AI Signal-of-the-Day Scorecard" |
-| [EU AI Act & GDPR assessment](reports/eu_ai_act_gdpr_assessment.docx) | 🧑 Individual + 👥 Group | Risk level, legal obligations and GDPR measures |
-| [ML Model Development notebook](notebooks/02_ml_model_development.ipynb) | 👥 Group | Data loading from PostgreSQL, preprocessing, feature engineering and modelling for AAPL, AMZN and GOOG |
+| [Time Series Analysis notebook](notebooks/01_time_series_analysis.ipynb) | Individual | Time series handling, visualisation, ARIMA, regression, classification, clustering, anomaly detection, MLP and LSTM |
+| [SQL queries](sql/) | Individual | Filtering, aggregation, joins, `CASE`, window functions on the financial data warehouse |
+| [Project proposal](reports/project_proposal.pdf) | Individual | AI Project Canvas for an "AI Signal-of-the-Day Scorecard" |
+| [EU AI Act & GDPR assessment](reports/eu_ai_act_gdpr_assessment.docx) | Individual + Group | Risk level, legal obligations and GDPR measures |
+| [ML Model Development notebook](notebooks/02_ml_model_development.ipynb) | Group | Data loading from PostgreSQL, preprocessing, feature engineering and modelling for AAPL, AMZN and GOOG |
 
-## 📊 Key Results
+## Key Results
 
 ### Forecasting the ASML closing price (one day ahead)
 
@@ -82,7 +82,7 @@ None of the models beat the simple "always up" baseline. Daily direction is clos
 
 K-Means and hierarchical clustering grouped the NASDAQ-100 companies into 4 risk/return profiles, from low-volatility steady stocks to high-volatility high-return stocks. DBSCAN flagged **APP** and **AXON** as anomalies because of their extreme return and volatility, and **META** because of its unusually low volatility.
 
-## 🖼️ Visual Highlights
+## Visual Highlights
 
 | | |
 |:---:|:---:|
@@ -93,7 +93,7 @@ K-Means and hierarchical clustering grouped the NASDAQ-100 companies into 4 risk
 | <img src="images/group_close_prices.png" alt="Minute-level close prices of AAPL, GOOG and AMZN"> | |
 | Group project: minute-level prices of AAPL, GOOG and AMZN | |
 
-## ⚖️ Responsible AI: EU AI Act & GDPR
+## Responsible AI: EU AI Act & GDPR
 
 I proposed an **"AI Signal-of-the-Day Scorecard"**: a daily 0-100 score that ranks NASDAQ-100 stocks by their chance of beating the index. In the [legal assessment](reports/eu_ai_act_gdpr_assessment.docx) I concluded:
 
@@ -101,7 +101,7 @@ I proposed an **"AI Signal-of-the-Day Scorecard"**: a daily 0-100 score that ran
 - **Obligations:** be transparent that scores are AI-generated, provide clear instructions for use, and keep human oversight. High-risk duties (conformity assessment, EU database registration) do not apply.
 - **GDPR:** the model uses no personal data, only public market data. The only personal data is user login metadata. Measures: data minimisation, a privacy notice, role-based access, encryption and a way for users to request deletion.
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 nasdaq100-market-intelligence/
@@ -117,7 +117,7 @@ nasdaq100-market-intelligence/
 └── .env.example                        # database settings template for notebook 02
 ```
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 git clone <this-repo-url>
@@ -133,7 +133,7 @@ jupyter notebook notebooks/
 - **Notebook 01** runs with the files in `data/`. Only the minute-data and per-company clustering sections need the extra files described in [data/README.md](data/README.md).
 - **Notebook 02** needs `data/model_input_data.csv`, or access to a PostgreSQL database with the `model_input_data` table. Set the variables from [`.env.example`](.env.example) as environment variables before running the database cell.
 
-## 🔭 What I Would Improve Next
+## What I Would Improve Next
 
 - Use **time-ordered splits** (`TimeSeriesSplit`) for the up/down classifier instead of a random split. This avoids look-ahead bias.
 - Fit scalers on the training data only, and evaluate per company in the group pipeline.
@@ -141,10 +141,10 @@ jupyter notebook notebooks/
 - Predict **returns instead of raw prices**, and add features like market breadth, sector momentum and news sentiment for the up/down classifier.
 - Turn the best model into a small **dashboard or alert service**, as proposed for Move Tickers.
 
-## 🛠️ Skills Demonstrated
+## Skills Demonstrated
 
 `Python` · `pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `SQL (PostgreSQL)` · `SQLAlchemy` · `statsmodels` · `ARIMA / auto-ARIMA` · `scikit-learn` · `XGBoost` · `TensorFlow / Keras (MLP, LSTM)` · `K-Means` · `Hierarchical clustering` · `DBSCAN` · `Feature engineering` · `Model evaluation` · `EU AI Act & GDPR` · `Teamwork (Agile / Scrum)`
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 This project was made during the **Applied Data Science & Artificial Intelligence** bachelor at **Breda University of Applied Sciences** (Year 1, Block D, 2024-25). The client case (Move Tickers) and datasets were provided by the university. Thanks to my teammates in Group 11 and to our mentors and lecturers for their guidance.
